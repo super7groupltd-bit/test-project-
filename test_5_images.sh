@@ -2,7 +2,7 @@
 
 # Test script - 5 images to check style before running all 173
 
-STYLE="Professional hand-drawn explainer illustration style. Colourful backgrounds relevant to the scene — deep space scenes have dark blue or black backgrounds with stars, planets, moons and rockets drawn simply but clearly. Earth scenes have warm colourful backgrounds. Bold confident black outlines. Simple stick figures with round heads, dot eyes, and expressive body language. Flat bright colours throughout — yellow suns, blue Earth, red rockets, orange and purple planets, white stars. Clear bold handwritten-style labels. Red arrows for emphasis. Simple iconic recognisable objects. Think Kurzgesagt simplified style but with stick figures. Charming, colourful, clear and expressive. Not realistic, not 3D, not photographic."
+"Hand-drawn stick figure illustration style inspired by the YouTube channel Zenn. Simple stick figures with round heads, dot eyes, and expressive body language. BUT with rich vibrant colourful backgrounds — space scenes have deep dark blue and purple backgrounds packed with bright white stars, glowing yellow suns, blue and green Earth, orange and red planets, silver rockets and space stations. Use lots of colour — bright yellows, electric blues, vivid purples, warm oranges, glowing greens. Bold black outlines on all figures and objects. Wobbly hand-drawn feel but colourful and lively. Red arrows and handwritten labels for emphasis. Every scene feels alive with colour and energy. Not realistic, not 3D, not photographic. Charming, expressive and packed with colour."
 
 mkdir -p test_output
 
