@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Higgsfield image generation - parallel batches of 10
-"Hand-drawn stick figure illustration style inspired by the YouTube channel Zenn. Simple stick figures with round heads, dot eyes, and expressive body language. BUT with rich vibrant colourful backgrounds — space scenes have deep dark blue and purple backgrounds packed with bright white stars, glowing yellow suns, blue and green Earth, orange and red planets, silver rockets and space stations. Use lots of colour — bright yellows, electric blues, vivid purples, warm oranges, glowing greens. Bold black outlines on all figures and objects. Wobbly hand-drawn feel but colourful and lively. Red arrows and handwritten labels for emphasis. Every scene feels alive with colour and energy. Not realistic, not 3D, not photographic. Charming, expressive and packed with colour."
+STYLE="Hand-drawn stick figure illustration style inspired by the YouTube channel Zenn. Simple stick figures with round heads, dot eyes, and expressive body language. Rich vibrant colourful backgrounds — space scenes have deep dark blue and purple backgrounds packed with bright white stars, glowing yellow suns, blue and green Earth, orange and red planets, silver rockets and space stations. Lots of colour — bright yellows, electric blues, vivid purples, warm oranges, glowing greens. Bold black outlines on all figures and objects. Wobbly hand-drawn feel but colourful and lively. Red arrows and handwritten labels for emphasis. Every scene feels alive with colour and energy. Not realistic, not 3D, not photographic. Charming, expressive and packed with colour."
 
 mkdir -p output
 
