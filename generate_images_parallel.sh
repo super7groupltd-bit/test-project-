@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Higgsfield image generation - parallel batches of 10
-STYLE="Amateur hand-drawn stick figure style like MS Paint. White background. Thick uneven wobbly outlines. Simple stick figures with round heads and dot eyes. Basic facial expressions. No shading. No 3D. No realism. No anime. Intentionally bad drawing. Simple flat colours."
+STYLE="Clean professional whiteboard illustration style. White background. Bold confident black outlines. Simple stick figures with round heads, dot eyes, and expressive body language. Flat bright colours used sparingly as accents. Clear bold handwritten-style labels. Red arrows for emphasis. Simple iconic objects that are instantly recognisable. Like a high quality explainer video illustration. Not realistic, not 3D, not photographic. Think RSA Animate or Kurzgesagt simplified. Clean, sharp, charming and clear."
 
 mkdir -p output
 
@@ -9,7 +9,7 @@ gen() {
   local num=$1
   local prompt=$2
   echo "Generating image $num..."
-  higgsfield generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --aspect-ratio 16:9 --wait > "output/image_${num}.txt" 2>&1
+  higgsfield generate create nano_banana_pro --prompt "${STYLE} ${prompt}" --aspect-ratio 16:9 --wait > "output/image_${num}.txt" 2>&1
   echo "Done $num"
 }
 
