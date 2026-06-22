@@ -10,7 +10,7 @@ gen() {
   local num=$1
   local prompt=$2
   echo "Generating test image $num..."
-  higgsfield generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --aspect-ratio 16:9 --wait > "test_output/test_${num}.txt" 2>&1
+  higgsfield generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --wait > "test_output/test_${num}.txt" 2>&1
   echo "Done $num - check test_output/test_${num}.txt for URL"
 }
 
