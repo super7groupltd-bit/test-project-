@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Higgsfield image generation - parallel batches of 10
-STYLE="Clean professional whiteboard illustration style. White background. Bold confident black outlines. Simple stick figures with round heads, dot eyes, and expressive body language. Flat bright colours used sparingly as accents. Clear bold handwritten-style labels. Red arrows for emphasis. Simple iconic objects that are instantly recognisable. Like a high quality explainer video illustration. Not realistic, not 3D, not photographic. Think RSA Animate or Kurzgesagt simplified. Clean, sharp, charming and clear."
+STYLE="Professional hand-drawn explainer illustration style. Colourful backgrounds relevant to the scene — deep space scenes have dark blue or black backgrounds with stars, planets, moons and rockets drawn simply but clearly. Earth scenes have warm colourful backgrounds. Bold confident black outlines. Simple stick figures with round heads, dot eyes, and expressive body language. Flat bright colours throughout — yellow suns, blue Earth, red rockets, orange and purple planets, white stars. Clear bold handwritten-style labels. Red arrows for emphasis. Simple iconic recognisable objects. Think Kurzgesagt simplified style but with stick figures. Charming, colourful, clear and expressive. Not realistic, not 3D, not photographic."
 
 mkdir -p output
 
