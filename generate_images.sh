@@ -12,7 +12,7 @@ run() {
   local num=$1
   local prompt=$2
   echo "Generating image $num..."
-  higgsfield generate create nano_banana_2 --prompt "$STYLE $prompt" --wait > output/image_${num}.txt 2>&1
+  higgsfield generate create nano_banana_2 --prompt "$STYLE $prompt" --aspect-ratio 16:9 --wait > output/image_${num}.txt 2>&1
   echo "Done $num"
 }
 
