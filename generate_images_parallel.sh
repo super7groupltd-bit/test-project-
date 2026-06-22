@@ -8,8 +8,17 @@ mkdir -p output
 gen() {
   local num=$1
   local prompt=$2
+  local attempts=0
   echo "Generating image $num..."
-  higgsfield generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --wait > "output/image_${num}.txt" 2>&1
+  until higgsfield generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --wait > "output/image_${num}.txt" 2>&1 && grep -q "http" "output/image_${num}.txt"; do
+    attempts=$((attempts + 1))
+    if [ $attempts -ge 3 ]; then
+      echo "FAILED image $num after 3 attempts"
+      return
+    fi
+    echo "Retrying image $num (attempt $attempts)..."
+    sleep 5
+  done
   echo "Done $num"
 }
 
