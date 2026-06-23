@@ -9,6 +9,10 @@ gen() {
   local num=$1
   local prompt=$2
   local attempts=0
+  if grep -q "https://" "output_hestia/image_${num}.txt" 2>/dev/null; then
+    echo "Skipping image $num (already done)"
+    return
+  fi
   echo "Generating image $num..."
   local job_id=""
   until [[ -n "$job_id" ]]; do
