@@ -10,15 +10,21 @@ gen() {
   local prompt=$2
   local attempts=0
   echo "Generating image $num..."
-  until $HF generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --json > "output_hestia/image_${num}.txt" 2>&1 && grep -q "http\|job_id\|id" "output_hestia/image_${num}.txt"; do
-    attempts=$((attempts + 1))
-    if [ $attempts -ge 3 ]; then
-      echo "FAILED image $num after 3 attempts"
-      return
+  local job_id=""
+  until [[ -n "$job_id" ]]; do
+    job_id=$($HF generate create nano_banana_2 --prompt "${STYLE} ${prompt}" --json 2>/dev/null | tr -d '[]" \n')
+    if [[ -z "$job_id" ]]; then
+      attempts=$((attempts + 1))
+      if [ $attempts -ge 3 ]; then
+        echo "FAILED image $num after 3 attempts"
+        return
+      fi
+      echo "Retrying image $num (attempt $attempts)..."
+      sleep 5
     fi
-    echo "Retrying image $num (attempt $attempts)..."
-    sleep 5
   done
+  echo "Waiting for image $num..."
+  $HF generate wait "$job_id" > "output_hestia/image_${num}.txt" 2>&1
   echo "Done $num"
 }
 
